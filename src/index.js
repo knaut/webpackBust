@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import Icon from './icon.png';
+import printMe from './print.js';
 
 function component() {
   var element = document.createElement('div');
@@ -19,6 +20,12 @@ function component() {
   fa.classList.add('fa-address-book');
 
   element.appendChild(fa);
+
+  var btn = document.createElement('button');
+  btn.innerHTML = 'Click me and check the console!';
+  btn.onclick = printMe;
+
+  element.appendChild(btn);
 
   return element;
 }
