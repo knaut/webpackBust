@@ -96,6 +96,13 @@ function component() {
 
   element.appendChild(myIcon);
 
+  // <i class="fa fa-address-book" aria-hidden="true"></i>
+  var fa = document.createElement('i');
+  fa.classList.add('fa');
+  fa.classList.add('fa-address-book');
+
+  element.appendChild(fa);
+
   return element;
 }
 
@@ -17263,7 +17270,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(8)(content, options);
+var update = __webpack_require__(10)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -17288,7 +17295,7 @@ exports = module.exports = __webpack_require__(7)(undefined);
 
 
 // module
-exports.push([module.i, ".hello {\n  color: red;\n  background: url(" + __webpack_require__(0) + ");\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'FontAwesome';\n  src:  url(" + __webpack_require__(8) + ") format('woff2'),\n        url(" + __webpack_require__(9) + ") format('woff');\n  font-weight: 600;\n  font-style: normal;\n}\n\n.hello {\n  color: red;\n  font-family: 'FontAwesome';\n  background: url(" + __webpack_require__(0) + ");\n}\n\n.fa-address-book:before {\n    content: \"\\F2B9\";\n    font-style: normal;\n    font-size: 56px;\n}", ""]);
 
 // exports
 
@@ -17379,6 +17386,18 @@ function toComment(sourceMap) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "af7ae505a9eed503f8b8e6982036873e.woff2";
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fee66e712a8a08eef5805a46892932ad.woff";
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
 	Author Tobias Koppers @sokra
@@ -17422,7 +17441,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(9);
+var	fixUrls = __webpack_require__(11);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -17735,7 +17754,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports) {
 
 
