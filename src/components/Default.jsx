@@ -1,4 +1,5 @@
 var React = require('react');
+import Index from './Index.jsx';
 
 var Default = React.createClass({
 
@@ -16,7 +17,11 @@ var Default = React.createClass({
 
       </head>
       <body style={{fontFamily: ['Varela Round', 'sans-serif']}}>
-        <div id="app"></div>
+        <div id="app">
+          
+          <Index></Index>
+
+        </div>
         <script src="js/bundle.js"></script>
       </body>
       </html>
