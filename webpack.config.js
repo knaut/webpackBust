@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/components/Default.jsx',
+  entry: './src/components/Index.jsx',
   devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin([

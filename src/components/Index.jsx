@@ -1,6 +1,5 @@
 // React components
 import React from 'react';
-import './Default.scss';
 
 class Test extends React.Component {
   render() {
@@ -18,7 +17,7 @@ class Test extends React.Component {
     console.log(newTest)
 
     return(
-      <div>This is a good test</div>
+      <div>This is a good test {test.a}</div>
     )
   }
 }

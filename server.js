@@ -66,7 +66,7 @@ server.register([
     method: 'GET',
     path: '/',
     handler: {
-      view: 'Default'
+      view: 'Index'
     }
   });
 
