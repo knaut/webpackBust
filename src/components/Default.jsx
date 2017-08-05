@@ -13,7 +13,7 @@ export default class Default extends React.Component {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
         <title>Todo App</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"></link>
-        <link href="js/global.css" rel="stylesheet"></link>
+        <link href="css/global.css" rel="stylesheet"></link>
         <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'></link>
 
       </head>
