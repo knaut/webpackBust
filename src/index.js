@@ -6,7 +6,7 @@ import printMe from './print.js';
 function component() {
   var element = document.createElement('div');
 
-  element.innerHTML = _.join(['Hello', 'webpack', 'and in the world'], ' ');
+  element.innerHTML = _.join(['Hello', 'myself', 'and in the world'], ' ');
   element.classList.add('hello');
 
   var myIcon = new Image();
