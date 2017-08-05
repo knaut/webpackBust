@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const SassPlugin = require('sass-webpack-plugin');
 
 module.exports = {
   entry: './src/components/Index.jsx',
@@ -8,7 +9,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin([
       'dist'
-    ])
+    ]),
+    new SassPlugin('src/styles/global.scss')
   ],
   output: {
     filename: 'bundle.js',
@@ -20,14 +22,6 @@ module.exports = {
         test: /\.jsx$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,

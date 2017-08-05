@@ -17,7 +17,7 @@ class Test extends React.Component {
     console.log(newTest)
 
     return(
-      <div>This is a good test {test.a}</div>
+      <div className='red'>This is a good test {test.a}</div>
     )
   }
 }
