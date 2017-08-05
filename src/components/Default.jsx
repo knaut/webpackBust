@@ -1,9 +1,9 @@
-var React = require('react');
+import React from 'react';
 import Index from './Index.jsx';
 
-var Default = React.createClass({
+export default class Default extends React.Component {
 
-  render: function() {
+  render() {
 
     return(
       <html>
@@ -27,6 +27,4 @@ var Default = React.createClass({
       </html>
     );
   }
-});
-
-module.exports = Default;
+}

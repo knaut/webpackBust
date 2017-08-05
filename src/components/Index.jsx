@@ -9,7 +9,4 @@ class Test extends React.Component {
   }
 }
 
-React.render(
-  <Test />
-  , document.body
-);
+export default Test;
