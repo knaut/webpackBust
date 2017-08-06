@@ -14,7 +14,8 @@ module.exports = {
     new CleanWebpackPlugin([
       'dist'
     ]),
-    new SassPlugin('src/styles/global.scss')
+    new SassPlugin('src/styles/global.scss'),
+    new HtmlWebpackPlugin()
   ],
   output: {
     filename: 'bundle.js',

@@ -76,8 +76,8 @@ server.register([
   server.route({
     method: 'GET',
     path: '/',
-    handler: {
-      view: 'Default'
+    handler: function(request, reply) {
+      reply.file('./dist/index.html');
     }
   });
 
