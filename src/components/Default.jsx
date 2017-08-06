@@ -1,9 +1,36 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Index from './Index.jsx';
+import { Provider } from 'react-redux';
+import store from '../Store.js';
 
 export default class Default extends React.Component {
 
   render() {
+    console.log('bluerg2')
+    function checkDocument() {
+      console.log('test');
+      if (typeof document === 'undefined') {
+        return(
+          <Provider store={store}>
+            <Index></Index>
+          </Provider>
+        )
+      } else {
+        console.log('test2');
+        var dom = ReactDOM.render(
+            <Provider store={store}>
+              <Index></Index>
+            </Provider>,
+            document.getElementById('app')
+          )
+
+        console.log(dom)
+        return (
+          dom
+        )
+      }
+    }
 
     return(
       <html>
@@ -12,15 +39,13 @@ export default class Default extends React.Component {
         <meta charSet="utf-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
         <title>Todo App</title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"></link>
         <link href="css/global.css" rel="stylesheet"></link>
-        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'></link>
 
       </head>
-      <body style={{fontFamily: ['Varela Round', 'sans-serif']}}>
+      <body>
         <div id="app">
           
-          <Index></Index>
+          { checkDocument() }
 
         </div>
         <script src="js/bundle.js"></script>

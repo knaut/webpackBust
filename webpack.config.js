@@ -4,7 +4,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const SassPlugin = require('sass-webpack-plugin');
 
 module.exports = {
-  entry: './src/components/Index.jsx',
+  entry: [
+    './src/components/Index.jsx',
+    './src/Store.js',
+    './src/Actions.js'
+  ],
   devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin([
@@ -20,6 +24,11 @@ module.exports = {
     rules: [
       {
         test: /\.jsx$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
