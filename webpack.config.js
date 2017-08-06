@@ -15,7 +15,33 @@ module.exports = {
       'dist'
     ]),
     new SassPlugin('src/styles/global.scss'),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: 'node_modules/html-webpack-template/index.ejs',
+      inject: false,
+      title: 'General Operations Dashboard',
+      appMountId: 'root',
+      googleAnalytics: {
+        trackingId: 'UAXXXXXX',
+        pageViewOnLoad: true
+      },
+      links: [
+        'https://fonts.googleapis.com/css?family=Roboto',
+        {
+          href: '/apple-touch-icon.png',
+          rel: 'apple-touch-icon',
+          sizes: '180x180'
+        },
+        {
+          href: '/favicon-32x32.png',
+          rel: 'icon',
+          sizes: '32x32',
+          type: 'image/png'
+        }
+      ],
+      scripts: [
+        'js/bundle.js',
+      ],
+    })
   ],
   output: {
     filename: 'bundle.js',
@@ -32,6 +58,14 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
