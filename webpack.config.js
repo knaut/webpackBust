@@ -16,31 +16,18 @@ module.exports = {
     ]),
     new SassPlugin('src/styles/global.scss'),
     new HtmlWebpackPlugin({
+      // config api: https://github.com/jaketrent/html-webpack-template
       template: 'node_modules/html-webpack-template/index.ejs',
       inject: false,
       title: 'General Operations Dashboard',
       appMountId: 'root',
-      googleAnalytics: {
-        trackingId: 'UAXXXXXX',
-        pageViewOnLoad: true
-      },
       links: [
-        'https://fonts.googleapis.com/css?family=Roboto',
         {
-          href: '/apple-touch-icon.png',
-          rel: 'apple-touch-icon',
-          sizes: '180x180'
-        },
-        {
-          href: '/favicon-32x32.png',
-          rel: 'icon',
-          sizes: '32x32',
-          type: 'image/png'
+          href: 'css/global.css',
+          rel: 'stylesheet',
+          type: 'text/css'
         }
-      ],
-      scripts: [
-        'js/bundle.js',
-      ],
+      ]
     })
   ],
   output: {

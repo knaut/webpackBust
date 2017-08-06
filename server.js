@@ -44,28 +44,6 @@ server.register([
     path: '/{param*}',
     handler: {
       directory: {
-        path: 'src/assets',
-        index: ['index.html']
-      }
-    }
-  });
-
-  server.route({
-    method: 'GET',
-    path: '/js/{param*}',
-    handler: {
-      directory: {
-        path: 'dist',
-        index: ['index.html']
-      }
-    }
-  });
-
-  server.route({
-    method: 'GET',
-    path: '/css/{param*}',
-    handler: {
-      directory: {
         path: 'dist',
         index: ['index.html']
       }

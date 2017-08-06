@@ -4,10 +4,6 @@ import * as actions from '../Actions.js';
 import store from '../Store.js';
 console.log('blerg');
 
-import styles from '../styles/Default.scss';
-
-console.log(styles)
-
 class Increment extends React.Component {
   handleIncrement() {
     console.log(store)
