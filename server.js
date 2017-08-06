@@ -50,6 +50,17 @@ server.register([
     }
   });
 
+  server.route({
+    method: 'GET',
+    path: '/css/{param*}',
+    handler: {
+      directory: {
+        path: 'dist',
+        index: ['index.html']
+      }
+    }
+  });
+
   // APP ROUTES
   server.route({
     method: 'GET',
