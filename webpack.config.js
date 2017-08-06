@@ -15,7 +15,7 @@ module.exports = {
       // config api: https://github.com/jaketrent/html-webpack-template
       template: 'node_modules/html-webpack-template/index.ejs',
       inject: false,
-      title: 'General Operations Dashboard',
+      title: 'webpackBust',
       appMountId: 'root',
       links: [
         {
