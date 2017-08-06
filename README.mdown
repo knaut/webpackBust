@@ -1,0 +1,2 @@
+## webpackBust
+An exploration in learning webpack and configuring it minimally for Hapi, React, and Redux. Commit history should be descriptive and self-explanatory.
